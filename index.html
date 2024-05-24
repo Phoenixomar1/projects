@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salaries Management</title>
+    <link rel="stylesheet" href="salaries.css">
+</head>
+<body>
+<div class="crud">
+    <div class="head">
+        <h2>Salaries Management System</h2>
+        <p>Manage employee salaries</p>
+    </div>
+    <div class="input">
+        <label for="name">Name:</label>
+        <input type="text" placeholder="Name" id="name">
+        
+        <div class="salary-details">
+            <label for="basic">Basic Salary:</label>
+            <input onkeyup="getTotal()" type="number" id="basic" placeholder="Basic Salary">
+            
+            <label for="bonus">Bonus:</label>
+            <input onkeyup="getTotal()" type="number" id="bonus" placeholder="Bonus">
+            
+            <label for="deductions">Deductions:</label>
+            <input onkeyup="getTotal()" type="number" id="deductions" placeholder="Deductions">
+            
+            <small id="total"></small>
+        </div>
+        
+        <label for="department">Department:</label>
+        <input type="text" placeholder="Department" id="department">
+        
+        <button id="submit">Create</button>
+    </div>
+    
+    <div class="output">
+        <div class="searchblock">
+            <input type="text" placeholder="Search" id="search">
+            <div class="btnSearch">
+                <button id="searchName">Search by Name</button>
+                <button id="searchDepartment">Search by Department</button>
+            </div>
+        </div>
+        <div id="clearAlldata"></div>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Basic Salary</th>
+                <th>Bonus</th>
+                <th>Deductions</th>
+                <th>Total Salary</th>
+                <th>Department</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+            <tbody id="tbody"></tbody>
+        </table>
+    </div>
+</div>
+<script src="salaries.js"></script>
+</body>
+</html>
